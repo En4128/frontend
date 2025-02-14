@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Appointment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>College Appointment System</h1>
+        
+        <!-- Authentication Section -->
+        <div class="auth-section">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Professor Availability Section -->
+        <div class="availability-section" id="professorSection">
+            <h2>Set Availability</h2>
+            <form id="availabilityForm">
+                <label for="availableSlots">Available Slots:</label>
+                <input type="datetime-local" id="availableSlots" name="availableSlots" required>
+                
+                <button type="submit">Set Availability</button>
+            </form>
+        </div>
+
+        <!-- Student Booking Section -->
+        <div class="booking-section" id="studentSection">
+            <h2>Book Appointment</h2>
+            <form id="bookingForm">
+                <label for="professor">Select Professor:</label>
+                <select id="professor" name="professor" required>
+                    <option value="P1">Professor P1</option>
+                    <!-- Add more professors as needed -->
+                </select>
+                
+                <label for="slot">Available Slots:</label>
+                <select id="slot" name="slot" required>
+                    <!-- Slots will be populated dynamically -->
+                </select>
+                
+                <button type="submit">Book Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

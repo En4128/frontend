@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 200px;
+}
+
+.auth-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.auth-buttons {
+    margin: 20px 0;
+}
+
+button {
+    background-color: #050606;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1557b0;
+}
+
+.login-form {
+    margin-top: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.dashboard {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.new-appointment {
+    margin-bottom: 30px;
+}
+
+select, input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 100px;
+    resize: vertical;
+}
+
+.appointments-list, .pending-appointments, .approved-appointments {
+    margin-top: 30px;
+}
+
+.appointment-card {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border-left: 4px solid #1a73e8;
+}
+
+.appointment-card.pending {
+    border-left-color: #ffa000;
+}
+
+.appointment-card.approved {
+    border-left-color: #00c853;
+}
+
+.appointment-card.rejected {
+    border-left-color: #dc3545;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+h1, h2, h3 {
+    color: #202124;
+    margin-bottom: 15px;
+}
+
+.action-buttons {
+    margin-top: 10px;
+}
+
+.approve-btn {
+    background-color: #00c853;
+}
+
+.reject-btn {
+    background-color: #dc3545;
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+.notification.success {
+    background-color: #00c853;
+}
+
+.notification.error {
+    background-color: #dc3545;
+}
+
+.notification.info {
+    background-color: #1a73e8;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Appointment System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: white-;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>College Appointment System</h1>
+    </header>
+    <nav>
+        <a href="signin.html">Sign In</a>
+        <a href="sigup.html">Sign Up</a>
+    </nav>
+    <div class="container">
+        <h2>Welcome to the College Appointment System</h2>
+        <p>Please select your role to proceed:</p>
+        <div id="student">
+            <h3>Student</h3>
+            <p>Book appointments with professors.</p>
+            <a href="student/home.html" class="button">Login as Student</a>
+        </div>
+        <div id="professor">
+            <h3>Professor</h3>
+            <p>Manage your availability and appointments.</p>
+            <a href="teacher/home.html" class="button">Login as Professor</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy;  College Appointment System</p>
+    </footer>
+</body>
+</html>

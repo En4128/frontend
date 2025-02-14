@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container" id="authContainer">
+            <h1>Welcome to Appointment System</h1>
+            <div class="auth-buttons">
+                <button onclick="showLogin('student')">Student Login</button>
+                <button onclick="showLogin('professor')">Professor Login</button>
+            </div>
+            <div class="login-form" id="loginForm" style="display: none;">
+                <h2 id="loginTitle">Login</h2>
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+
+        <!-- Student Dashboard -->
+        <div class="dashboard student-dashboard" id="studentDashboard" style="display: none;">
+            <h2>Student Dashboard</h2>
+            <div class="new-appointment">
+                <h3>Book New Appointment</h3>
+                <select id="professorSelect">
+                    <option value="">Select Professor</option>
+                    <option value="prof1">Dr. Sarah Johnson</option>
+                    <option value="prof2">Dr. Robert Davis</option>
+                    <option value="prof2">Dr. Emily White</option>
+                </select>
+                <input type="date" id="appointmentDate">
+                <select id="appointmentTime">
+                    <option value="">Select Time</option>
+                    <option value="09:00">09:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="14:00">02:00 PM</option>
+                    <option value="15:00">03:00 PM</option>
+                </select>
+                <textarea id="appointmentReason" placeholder="Reason for appointment"></textarea>
+                <button onclick="bookAppointment()">Book Appointment</button>
+            </div>
+            <div class="appointments-list">
+                <h3>Your Appointments</h3>
+                <div id="studentAppointmentsList"></div>
+            </div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+        <!-- Professor Dashboard -->
+        <div class="dashboard professor-dashboard" id="professorDashboard" style="display: none;">
+            <h2>Professor Dashboard</h2>
+            <div class="pending-appointments">
+                <h3>Pending Appointments</h3>
+                <div id="pendingAppointmentsList"></div>
+            </div>
+            <div class="approved-appointments">
+                <h3>Approved Appointments</h3>
+                <div id="approvedAppointmentsList"></div>
+            </div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
